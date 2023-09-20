@@ -1,0 +1,48 @@
+Here is a good Bitcoin script tester: https://siminchen.github.io/bitcoinIDE/build/editor.html
+	- Note that it is limited in ability. For example: it can not always check the balence correctly
+
+Hints:
+Need to set UTXO index correctly (reread hint 1)
+It is difficult to track all hashes and distinguish between them
+Need to set the utx_index for each tracation. If it is the same between tranactions error: "This UTXO index is already spent"
+VerifyScript() will catch syntax errors of the script before broadcasting to the network
+Constants on the stack are op codes. e.g. OP_2 = int(2); int(2) is very different
+
+Refernce the "Common errors" section for wired errors
+
+The website https://live.blockcypher.com/ is very helpful for viewing tracactions ont he block chain and viewing the status if your transactions have made it to the blockchain
+	- Verify that you can view the transaction at https://live.blockcypher.com/btc-testnet/tx/<txid>
+	- python3 bitcoinctl.py urls
+
+If you get an error such as “witness script detected in tx without witness data”, then it probably means your UTXO index is wrong
+
+BTC OP_CODES: https://en.bitcoin.it/wiki/Script
+
+create_CHECKSIG_signature() will create the signature which is provided to the list that is used to create the Bitcoin script
+
+PART 1: P2PKH Transaction (pay-to-pubkey-hash) script:
+from slides: [preformed by P2PKH_scriptPubKey(address)]
+	1. OP_DUP
+	2. OP_HASH160
+	3. Push 20 bytes of data to the stack
+	4. OP_EQUALVERIFY
+	5. OP_CHECKSIG
+Goal of this is to redeeme the facet provided funds
+
+P2PKH_scriptSig(...) provides the sigscript to redeem a UTXO being spent (one of the UTXO from the indices)
+Rememebr the utxo index must be unspent
+Update any successful funding runs [./bitcoinctl.py part] with the transaction hash fromt he json output [txid_p2pk] such that [./bitcoinctl.py urls] will be helpful again
+
+PART 2: PUZZLE
+Find integer values p and q which statify the system of equations and are bounded on [1000,10000)
+Plug into 'puzzle_txn_q/p/x/y' fields
+test with './bitcoinctl.py part2' onan unspend utxo_index and record the trancation hash in txid_puzzle_txn1 for ./bitcoinctl.py urls
+
+Must write the sig script in puzzle_scriptSig() which must preform the system of equations math. Should not just check the values of p,q,x,y
+	=> script will only have the x,y values and must verrify the passed in p,q values
+test using './bitcoinctl.py part2b' on an unspent utxo transaction update the urls. Note you must allow for the transaction to go through! (~10 min)
+note: there may be auto miners for part a of asssignment. This will not reduce grade if the sigscript is correct
+
+PART 3: MULTISIG
+
+REMEMBER TO REFUND TRANSACTION

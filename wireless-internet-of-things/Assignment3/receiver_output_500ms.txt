@@ -1,0 +1,33 @@
+[00:00:00.000,091] <inf> recv: RF setup started
+*** Booting Zephyr OS build v3.2.99-ncs1 ***
+[00:00:00.000,488] <dbg> recv: main: channel: 11
+[00:00:00.000,640] <inf> recv: [Receiver Stats] Listen: 0 us
+[00:00:00.000,671] <inf> recv: [Receiver Stats] Receive: 0 us
+[00:00:00.000,671] <inf> recv: [Receiver Stats] Transmit: 0 us
+[00:00:15.000,579] <inf> recv: [Receiver Stats] Listen: 142758 us
+--- 7 messages dropped ---
+ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 10
+cc --- 2 messages dropped ---
+00 ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 80
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+[00:00:30.000,579] <inf> recv: [Receiver Stats] Listen: 274349 us
+[00:00:30.000,579] <inf> recv: [Receiver Stats] Receive: 7680 us
+[00:00:30.000,610] <inf> recv: [Receiver Stats] Transmit: 2352 us
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+00 --- 3 messages dropped ---
+ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+cc --- 2 messages dropped ---
+00 ff ff 50 be ca c3 3c 36 ce fb cd ab dc a9 35 7b 73 36 ce f4 47 72 6f 75 70 20 31 31 01
+[00:00:45.000,579] <inf> recv: [Receiver Stats] Listen: 409673 us
+[00:00:45.000,579] <inf> recv: [Receiver Stats] Receive: 12800 us
+[00:00:45.000,610] <inf> recv: [Receiver Stats] Transmit: 3920 us

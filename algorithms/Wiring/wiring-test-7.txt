@@ -1,0 +1,54 @@
+19 33
+b1 breaker
+o1 outlet
+s2 switch
+l1 light
+l2 light
+s3 switch
+l3 light
+l4 light
+l5 light
+s1 switch
+l6 light
+l7 light
+o2 outlet
+j1 box
+o3 outlet
+s4 switch
+l8 light
+o4 outlet
+j2 box
+s2 l1 4
+s2 l2 2
+l1 l2 3
+o1 s2 5
+o1 s3 10
+s3 s2 1
+s3 l2 1
+b1 o1 6
+b1 s1 30
+s1 s3 10
+s3 l3 20
+s3 l5 25
+l3 l5 1
+l3 l4 10
+l5 l4 1
+s1 l5 1
+l6 l5 2
+s1 l6 3
+s1 l7 10
+l6 l7 15
+s1 o2 10
+o2 l7 3
+b1 o2 15
+b1 o4 2
+o4 j2 3
+b1 j1 10
+j2 j1 1
+j1 o3 5
+j1 s4 5
+o3 s4 5
+j1 l8 1
+l8 o3 1
+s4 l8 100
+202

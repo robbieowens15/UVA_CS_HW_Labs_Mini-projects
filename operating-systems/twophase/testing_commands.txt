@@ -1,0 +1,20 @@
+Spawn worker
+python ./worker.py unix:first-worker-socket first-worker-log &
+python ./worker.py unix:second-worker-socket second-worker-log &
+
+Spawn coordinator:
+python ./coordinator.py unix:coordinator-socket coordinator-log unix:first-worker-socket unix:second-worker-socket &
+
+Set a value:
+python ./set_value.py unix:coordinator-socket SomeValue
+
+get a value:
+python ./get_value.py unix:first-worker-socket
+python ./get_value.py unix:second-worker-socket
+
+Find Servers to Kill:
+ps -a -u $USER | grep python
+
+Running All Tests:
+make no_fail_test
+make failure_test

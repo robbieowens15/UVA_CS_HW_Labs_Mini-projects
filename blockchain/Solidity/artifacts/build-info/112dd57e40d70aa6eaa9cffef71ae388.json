@@ -1,0 +1,292 @@
+{
+	"id": "112dd57e40d70aa6eaa9cffef71ae388",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"IERC20Receiver.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0-or-later\n\npragma solidity ^0.8.0;\n\n/**\n * @title ERC20 token receiver interface\n * @dev Interface for any contract that wants to support safeTransfers\n * from ERC20 asset contracts.  Based on the IERC721Receiver code.\n */\ninterface IERC20Receiver {\n    /**\n     * @dev Whenever an {IERC20} amount is transferred to this contract from `from`, this function is called.\n     *\n     * It must return true to confirm the token transfer.\n     * If false is returned the transfer will be reverted.\n     *\n     * The selector can be obtained in Solidity with `IERC20Receiver.onERC20Received.selector`.\n     */\n    function onERC20Received(address from, uint amount) external returns (bool);\n}\n\n/* to use this code, put the following in your ERC-20 implementation:\n\n    function _afterTokenTransfer(address from, address to, uint256 amount) internal override {\n        if (to.code.length > 0) {\n            // token recipient is a contract, notify them\n            try IERC20Receiver(to).onERC20Receive(from, amount) returns (bool success) {\n                // the recipient returned a bool, TODO validate if they returned true\n            } catch {\n                // the notification failed (maybe they don't implement the `IERC20Receiver` interface?)\n            }\n        }\n    }\n\n*/\n"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"IERC20Receiver.sol": {
+				"IERC20Receiver": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "from",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "amount",
+									"type": "uint256"
+								}
+							],
+							"name": "onERC20Received",
+							"outputs": [
+								{
+									"internalType": "bool",
+									"name": "",
+									"type": "bool"
+								}
+							],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"details": "Interface for any contract that wants to support safeTransfers from ERC20 asset contracts.  Based on the IERC721Receiver code.",
+						"kind": "dev",
+						"methods": {
+							"onERC20Received(address,uint256)": {
+								"details": "Whenever an {IERC20} amount is transferred to this contract from `from`, this function is called. It must return true to confirm the token transfer. If false is returned the transfer will be reverted. The selector can be obtained in Solidity with `IERC20Receiver.onERC20Received.selector`."
+							}
+						},
+						"title": "ERC20 token receiver interface",
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"onERC20Received(address,uint256)": "bc04f0af"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"onERC20Received\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Interface for any contract that wants to support safeTransfers from ERC20 asset contracts.  Based on the IERC721Receiver code.\",\"kind\":\"dev\",\"methods\":{\"onERC20Received(address,uint256)\":{\"details\":\"Whenever an {IERC20} amount is transferred to this contract from `from`, this function is called. It must return true to confirm the token transfer. If false is returned the transfer will be reverted. The selector can be obtained in Solidity with `IERC20Receiver.onERC20Received.selector`.\"}},\"title\":\"ERC20 token receiver interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"IERC20Receiver.sol\":\"IERC20Receiver\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"IERC20Receiver.sol\":{\"keccak256\":\"0xb88233558cf9a91dd0a50c1ef53dd8a152c5f869dc2051c7cc6e70affb2160ab\",\"license\":\"GPL-3.0-or-later\",\"urls\":[\"bzz-raw://de590442485acf39670c3bfb06a07aac61065a22d95495df1b56134965469a89\",\"dweb:/ipfs/QmYdELL1D5Qm6V8KZBP8bqKW9oixeJsQ4FwXNAv57BPxvw\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"IERC20Receiver.sol": {
+				"ast": {
+					"absolutePath": "IERC20Receiver.sol",
+					"exportedSymbols": {
+						"IERC20Receiver": [
+							13
+						]
+					},
+					"id": 14,
+					"license": "GPL-3.0-or-later",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "46:23:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "interface",
+							"documentation": {
+								"id": 2,
+								"nodeType": "StructuredDocumentation",
+								"src": "71:186:0",
+								"text": " @title ERC20 token receiver interface\n @dev Interface for any contract that wants to support safeTransfers\n from ERC20 asset contracts.  Based on the IERC721Receiver code."
+							},
+							"fullyImplemented": false,
+							"id": 13,
+							"linearizedBaseContracts": [
+								13
+							],
+							"name": "IERC20Receiver",
+							"nameLocation": "268:14:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"documentation": {
+										"id": 3,
+										"nodeType": "StructuredDocumentation",
+										"src": "289:348:0",
+										"text": " @dev Whenever an {IERC20} amount is transferred to this contract from `from`, this function is called.\n It must return true to confirm the token transfer.\n If false is returned the transfer will be reverted.\n The selector can be obtained in Solidity with `IERC20Receiver.onERC20Received.selector`."
+									},
+									"functionSelector": "bc04f0af",
+									"id": 12,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "onERC20Received",
+									"nameLocation": "651:15:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 8,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 5,
+												"mutability": "mutable",
+												"name": "from",
+												"nameLocation": "675:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 12,
+												"src": "667:12:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 4,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "667:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 7,
+												"mutability": "mutable",
+												"name": "amount",
+												"nameLocation": "686:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 12,
+												"src": "681:11:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 6,
+													"name": "uint",
+													"nodeType": "ElementaryTypeName",
+													"src": "681:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "666:27:0"
+									},
+									"returnParameters": {
+										"id": 11,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 10,
+												"mutability": "mutable",
+												"name": "",
+												"nameLocation": "-1:-1:-1",
+												"nodeType": "VariableDeclaration",
+												"scope": 12,
+												"src": "712:4:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bool",
+													"typeString": "bool"
+												},
+												"typeName": {
+													"id": 9,
+													"name": "bool",
+													"nodeType": "ElementaryTypeName",
+													"src": "712:4:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bool",
+														"typeString": "bool"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "711:6:0"
+									},
+									"scope": 13,
+									"src": "642:76:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "external"
+								}
+							],
+							"scope": 14,
+							"src": "258:462:0",
+							"usedErrors": []
+						}
+					],
+					"src": "46:1269:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

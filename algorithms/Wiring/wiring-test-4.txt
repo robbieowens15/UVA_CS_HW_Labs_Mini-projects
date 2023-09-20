@@ -1,0 +1,16 @@
+5 9
+b1 breaker
+s1 switch
+l1 light
+j1 box
+o1 outlet
+b1 s1 1
+b1 j1 5
+b1 l1 2
+b1 o1 2
+o1 s1 1
+s1 j1 1
+j1 l1 1
+s1 l1 5
+o1 l1 1
+13

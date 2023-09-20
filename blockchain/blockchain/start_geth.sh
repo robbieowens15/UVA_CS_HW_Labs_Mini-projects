@@ -1,0 +1,1 @@
+geth --identity "rao7utn" --datadir ./ --networkid 67834502 --maxpeers 1 --nodiscover --syncmode full --gcmode "archive" --http --http.corsdomain="package://6fd22d6fe5549ad4c4d8fd3ca0b7816b.mod" --http.api web3,eth,debug,personal,net --vmdebug --allow-insecure-unlock

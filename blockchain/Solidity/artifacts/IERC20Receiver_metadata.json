@@ -1,0 +1,76 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "onERC20Received",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Interface for any contract that wants to support safeTransfers from ERC20 asset contracts.  Based on the IERC721Receiver code.",
+			"kind": "dev",
+			"methods": {
+				"onERC20Received(address,uint256)": {
+					"details": "Whenever an {IERC20} amount is transferred to this contract from `from`, this function is called. It must return true to confirm the token transfer. If false is returned the transfer will be reverted. The selector can be obtained in Solidity with `IERC20Receiver.onERC20Received.selector`."
+				}
+			},
+			"title": "ERC20 token receiver interface",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"IERC20Receiver.sol": "IERC20Receiver"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"IERC20Receiver.sol": {
+			"keccak256": "0xb88233558cf9a91dd0a50c1ef53dd8a152c5f869dc2051c7cc6e70affb2160ab",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://de590442485acf39670c3bfb06a07aac61065a22d95495df1b56134965469a89",
+				"dweb:/ipfs/QmYdELL1D5Qm6V8KZBP8bqKW9oixeJsQ4FwXNAv57BPxvw"
+			]
+		}
+	},
+	"version": 1
+}

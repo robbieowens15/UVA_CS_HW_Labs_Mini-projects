@@ -1,0 +1,42 @@
+12 28
+o2 outlet
+s2 switch
+l4 light
+j2 box
+o3 outlet
+s1 switch
+l3 light
+l2 light
+l1 light
+o1 outlet
+b1 breaker
+j1 box
+o2 l4 1
+l4 s2 2
+o2 l4 1
+l4 s2 2
+o2 s2 3
+o2 l2 2
+o2 j1 5
+l2 s1 3
+l2 l1 5
+l2 b1 2
+j1 b1 4
+j1 l1 1
+l1 s1 5
+j1 s1 4
+s2 s1 4
+s2 j2 4
+j2 l3 2
+j2 o3 5
+o3 o1 1
+o3 b1 3
+s1 l3 1
+s1 o1 5
+o1 b1 1
+l1 o1 2
+l1 l3 1
+b1 l3 3
+b1 l1 1
+l3 o1 1
+30

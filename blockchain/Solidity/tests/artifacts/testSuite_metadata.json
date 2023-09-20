@@ -1,0 +1,133 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "beforeAll",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkChioceCreation",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkFailure",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkSenderAndValue",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkSuccess",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "checkSuccess2",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"beforeAll()": {
+					"notice": "'beforeAll' runs before all other tests More special functions are: 'beforeEach', 'beforeAll', 'afterEach' & 'afterAll'"
+				},
+				"checkSenderAndValue()": {
+					"notice": "Custom Transaction Context: https://remix-ide.readthedocs.io/en/latest/unittesting.html#customization #sender: account-1 #value: 100"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"tests/Poll_test.sol": "testSuite"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"IPoll.sol": {
+			"keccak256": "0xaa612125ed367dac99bb4e94ecabeaa8f2ce19abf579c71486a49ffa6981b2a9",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://f6eec6133d723000a7ed3abb4031bd56e16d83f23c2dcb209a86745629ebe467",
+				"dweb:/ipfs/QmXWU9X15A37U9hFTvFcgSfwiJc7QvvMivGida1KmeXhKe"
+			]
+		},
+		"Poll.sol": {
+			"keccak256": "0xbf6c65f19e22853914f04fd46322e599878a2eb9ff56d0c29df57b3596ffe2b0",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://f4c285234e4b9afe47c82c285e252c21af3c1951cce3b77a99f19f6708a612ea",
+				"dweb:/ipfs/QmStpZ8mtQSSVoYv4rjBex9cT1MFUm4Vt2bmx2HHJTubQB"
+			]
+		},
+		"remix_accounts.sol": {
+			"keccak256": "0x198a94b8e0342a81c31fda8ba387964155802ef81807e01e83e2320682dce327",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://db7d9939731e6fe2030d53b80f57ce2c1f8044209c1c67e634e81160227d3019",
+				"dweb:/ipfs/QmRLYhZ2Y6bfh83QSD2hCnhVFejevzh77zUTohCCC8yCtu"
+			]
+		},
+		"remix_tests.sol": {
+			"keccak256": "0xe2783cdc204cba8c72494119339f1d90f9022b15d6c718c668b7f097d8e29787",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bb6a22e64c7f16bcaab63b1c1a1b269d5be8a6d37bdd9dec1718477ab916b18e",
+				"dweb:/ipfs/QmdkW1tT5iadBvaHMCoskhDGZKnfdg8o1D9CcoQYtdJet7"
+			]
+		},
+		"tests/Poll_test.sol": {
+			"keccak256": "0x4ccf3372f535b8cf58a9fa869dcd026018da0313004535ccbde0288d21b78dd2",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://d531fffab56e7796e7695e521ecf06bd03f3a446eb0329eb28128d622ad25fde",
+				"dweb:/ipfs/QmWiNh7zr1v6hVpxWHqtnfj5x8dVAER2JomJwFpNME4hGT"
+			]
+		}
+	},
+	"version": 1
+}

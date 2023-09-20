@@ -1,0 +1,32 @@
+12 18	
+l3 switch
+l4 light
+l5 light
+s1 outlet
+l1 switch
+l2 light
+b1 light
+s2 light
+o1 switch
+j1 light
+s3 box
+l6 breaker
+s1 l4 1
+s1 l3 5
+l4 l3 2
+l3 l5 4
+s1 s3 2
+l3 l1 1
+l5 l2 1
+l1 l2 3
+s3 l1 4
+l1 s2 5
+s3 s2 1
+s2 b1 1
+s3 l6 5
+s2 l6 1
+b1 l6 2	
+l6 j1 1
+l6 o1 2
+o1 j1 3
+36
