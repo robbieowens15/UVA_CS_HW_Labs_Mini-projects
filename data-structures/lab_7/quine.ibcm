@@ -1,0 +1,21 @@
+C006 000 Jump to start of Program
+0015 001 LENGTH_OF_PROGRAM
+3000 002 LOAD_COMMAND
+0000 003 i
+0001 004 ONE
+0000 005 ZERO
+B000 006 Begin Quine
+3005 007 	Load ZERO
+4003 008 	Store ZERO @ i (i=0)
+B000 009 Begin Loop
+3003 00A 	Load i
+5002 00B 	Create Load command for mem[i]
+400D 00C 	Impliment Load command on line below
+B000 00D 	Becomes the Load command
+1800 00E 	Print the line of the program
+3003 00F 	Load i
+5004 010	Add 1 to i (i++)
+4003 011 	Store i
+6001 012 	Subtract LOAD_COMMAND [i-LOAD_COMMAND]
+E009 013 	Loop back to begining of Quine Loop if (i-LOAD_COMMAND < 0)
+0000 014 	Halt, end of Quine

@@ -1,0 +1,12 @@
+Header:
+Robert Owens (rao7utn)
+09/07/2020
+lifecycle.questions.txt
+
+1. Is this the equivlent of a java toString()?:
+
+friend ostream& operator<<(ostream& output, const MyObject& obj);
+
+2. Does the copy constructor make an exact replica in memory? Or does it simply point to the same object it was copied from?
+
+3. Will we ever have to put meaningful code into the destructor body, or is it all predefined by c++?

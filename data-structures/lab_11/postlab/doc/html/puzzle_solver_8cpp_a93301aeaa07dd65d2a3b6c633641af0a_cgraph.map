@@ -1,0 +1,5 @@
+<map id="solver" name="solver">
+<area shape="rect" id="node1" title="A Bread First Search Algorithm to find the shorted possible path to the finish state." alt="" coords="5,5,63,32"/>
+<area shape="rect" id="node2" href="$puzzle_solver_8cpp.html#af05a25f9c090c7e548df5059aa9bfb54" title="Generate the neighboring nodes of the graph This method creates the 1st order neightbors to a provide..." alt="" coords="111,5,213,32"/>
+<area shape="rect" id="node3" href="$puzzle_solver_8cpp.html#aae3d80960441f35f5fe0cf03ae73d202" title="Swap Method for switching two tiles This method will swap the postions of two tiles the positions are..." alt="" coords="261,5,315,32"/>
+</map>

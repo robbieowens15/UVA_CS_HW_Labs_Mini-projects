@@ -1,0 +1,16 @@
+# Robert Owens (rao7utn)
+# 11/3/2020
+# Makefile linkedlist.c (in-lab)
+C=clang $(CFLAGS)
+CFLAGS=
+DEBUG=
+OBJECTS= linkedlist.o 
+
+TreeCalcTest: $(OBJECTS)
+	$(C) $(DEBUG) $(OBJECTS)
+
+linkedlist.o: linkedlist.c
+
+.PHONY: clean
+clean:
+	-rm -f *.o *.out

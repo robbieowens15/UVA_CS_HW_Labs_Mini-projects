@@ -1,0 +1,31 @@
+C00A 000	jmp 	start 	skip around the variables
+0000 001 i    dw 0 int i
+0000 002 j    dw 0 int j
+0000 003 k    dw 0 int k
+0000 004 sum  dw 0 int sum
+0000 005 ZERO dw 0 int 0 (for comparison) 			
+0000 006 loopFlag	1 = loop 0 = no loop
+0000 007			leave space for changes
+0000 008
+0000 009
+1000 00A 	start loop read 	read i
+4001 00B 	store	i
+1000 00C 	read j
+4002 00D	store j
+1000 00E 	read k
+4003 00F 	store k
+3004 010	load sum to accumulator
+5001 011	add i to sum (sum += i)
+5002 012	add j to sum (sum += j)
+5003 013	add k to sum (sum += k)
+1800 014	print value in accumulator (sum)
+D018 015	If sum == 0 jump around unconditional jump
+B000 016	No oop
+C00A 017	Unconditional jump to start of loop
+3001 018	Load i to accumulator
+1800 019	Print value of i
+3002 01A	Load j into accumulator
+1800 01B	Print value of j
+3003 01C	load k into accumulator
+1800 01D	Print value of k
+0000 01E	Halt. End of program

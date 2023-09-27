@@ -1,0 +1,4 @@
+<map id="readInput" name="readInput">
+<area shape="rect" id="node1" title="reads in the game board and formats it as a string" alt="" coords="104,5,180,32"/>
+<area shape="rect" id="node2" href="$puzzle_solver_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Runs the puzzleSolver program." alt="" coords="5,5,56,32"/>
+</map>

@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "Test File:"
+read TESTFILE
+make
+./encoder $TESTFILE > encoded.txt
+./decoder encoded.txt > output.txt
+echo "		$TESTFILE:"
+cat $TESTFILE
+echo "		Encoded $TESTFILE:"
+cat encoded.txt
+echo "		Decoded $TESTFILE:"
+cat output.txt
+echo "	Differences between orginial $TESTFILE and decoded $TESTFILE:"
+diff $TESTFILE output.txt
+rm encoded.txt
+rm output.txt

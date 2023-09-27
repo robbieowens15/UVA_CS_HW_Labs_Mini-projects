@@ -1,0 +1,66 @@
+C00A 000	jmp 	start 	skip around the variables
+0000 001 SIZE
+0001 002 ONE
+0000 003 ZERO
+0042 004 FIRST_INDEX 
+0000 005 temp_index 			
+0000 006 temp_val
+0000 007 i
+4000 008 STORE
+3000 009 LOAD
+B000 00A Start Program
+1000 00B	read input (SIZE)
+4001 00C 	Store as SIZE
+3003 00D	Load Zero to accum (initialize i)
+4007 00E 	Store i as 0
+B000 00F Start Input Loop
+1000 010	read input (temp_val)
+4006 011 	Store as temp_val
+3007 012 	Load i to accum
+5004 013 	Add i to FIRST_INDEX (array index)
+B000 014 		blank_line
+5008 015 	Create STORE command at temp_index
+4018 016	Impliment STORE command execute in 2 line
+3006 017 	Load temp_val to accum
+4000 018 	Store accum (temp_val) to temp_index
+3007 019 	Load i to accum
+5002 01A 	Add 1 to i (i++)
+4007 01B 	Store updated i
+6001 01C 	i - SIZE if negative loop
+E00F 01D 	Jump to start of input loop
+B000 01E Setup next loop
+3003 01F 	Load ZERO to accum
+4007 020 	Store i = 0
+B000 021 Start print forward loop
+3004 022 	Load FIRST_INDEX to accum
+5007 023 	Add i to FIRST_INDEX (i+FIRST_INDEX)
+5009 024 	Create a Load command to load array @ temp_index
+4027 025 	Impliment the load command created above
+B000 026 		blank_line
+B000 027 	Becomes Load value in array @ temp_index
+B000 028 		blank_line
+B000 029 		blank_line
+1800 02A 	Print accum (value in array @ temp_index)
+3007 02B 	Load i to accum
+5002 02C 	Add 1 to i (i++)
+4007 02D 	Store updated i
+6001 02E 	i - SIZE if negative loop
+E021 02F 	Jump to start of print forwards loop
+B000 030 Setup next loop
+3001 031 	Load SIZE to accum
+6002 032 	Subtract 1 from accum (accum-1)
+4007 033 	Store accum as i (SIZE-1)
+B000 034 Start print backwards loop
+3004 035 	Load FIRST_INDEX to accum
+5007 036 	Add i to accum (FIRST_INDEX)
+5009 037 	Create Load command to load array @ temp_index
+403A 038 	Impliment the load command
+B000 039 		blank_line
+B000 03A 	Becomes load command value in array @ temp_index
+1800 03B 	Print accum (value in array @ temp_index)
+3007 03C 	Load i to accum
+6002 03D 	Subtract 1 from accum (i) [i--]
+4007 03E 	Store updated i
+A000 03F 	Compliment i (Flip sign magn. no matter)
+E034 040 	Loop if compliment i is negative
+0000 041	Halt. End of program

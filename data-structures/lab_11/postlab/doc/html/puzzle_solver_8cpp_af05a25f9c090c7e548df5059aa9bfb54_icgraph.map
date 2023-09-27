@@ -1,0 +1,5 @@
+<map id="genNeighbors" name="genNeighbors">
+<area shape="rect" id="node1" title="Generate the neighboring nodes of the graph This method creates the 1st order neightbors to a provide..." alt="" coords="209,5,312,32"/>
+<area shape="rect" id="node2" href="$puzzle_solver_8cpp.html#a93301aeaa07dd65d2a3b6c633641af0a" title="A Bread First Search Algorithm to find the shorted possible path to the finish state." alt="" coords="104,5,161,32"/>
+<area shape="rect" id="node3" href="$puzzle_solver_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Runs the puzzleSolver program." alt="" coords="5,5,56,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="Runs the puzzleSolver program." alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$puzzle_solver_8cpp.html#a9d27f6671d876fc1f57467943ed2315e" title="reads in the game board and formats it as a string" alt="" coords="104,5,180,32"/>
+<area shape="rect" id="node3" href="$puzzle_solver_8cpp.html#a93301aeaa07dd65d2a3b6c633641af0a" title="A Bread First Search Algorithm to find the shorted possible path to the finish state." alt="" coords="113,56,171,83"/>
+<area shape="rect" id="node4" href="$puzzle_solver_8cpp.html#af05a25f9c090c7e548df5059aa9bfb54" title="Generate the neighboring nodes of the graph This method creates the 1st order neightbors to a provide..." alt="" coords="228,56,331,83"/>
+<area shape="rect" id="node5" href="$puzzle_solver_8cpp.html#aae3d80960441f35f5fe0cf03ae73d202" title="Swap Method for switching two tiles This method will swap the postions of two tiles the positions are..." alt="" coords="379,56,432,83"/>
+</map>

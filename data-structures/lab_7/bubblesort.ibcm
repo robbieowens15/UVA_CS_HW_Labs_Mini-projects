@@ -1,0 +1,105 @@
+C010 000	jmp 	start 	skip around the variables
+000A 001 SIZE
+0001 002 ONE
+0000 003 ZERO
+0070 004 FIRST_INDEX 
+0000 005 temp_index 			
+0000 006 temp_val (for comparision and swap)
+0000 007 i
+0000 008 j
+4000 009 STORE
+3000 00A LOAD
+0000 00B temp_val2 [j-1 (for comparison)]
+0000 00C
+0000 00D
+0000 00E
+0000 00F
+B000 010 Start Program
+B000 011 Start Input Loop
+1000 012	read input (temp_val)
+4006 013 	Store as temp_val
+3007 014 	Load i to accum
+5004 015 	Add i to FIRST_INDEX (array index)
+5009 016 	Create STORE command at temp_index
+4019 017	Impliment STORE command execute in 2 line
+3006 018 	Load temp_val to accum
+B000 019 	Becomes Store accum (temp_val) to temp_index
+3007 01A 	Load i to accum
+5002 01B 	Add 1 to i (i++)
+4007 01C 	Store updated i
+6001 01D 	i - SIZE if negative loop
+E011 01E 	Jump to start of input loop
+B000 01F Setup double for loop
+3003 020 	Load ZERO to accum
+4007 021 	Store 0 in i (i = 0)
+B000 022 Start Outer Loop
+B000 023 Setup Inner loop
+3001 024 	Load SIZE to accum (10)
+6002 025 	Subtract 1 from accum (9)
+4008 026 	Store in j (j = 9)
+B000 027 Start Inner Loop
+3004 028 		Load FIRST_INDEX
+5008 029		Add j to FIRST_INDEX
+500A 02A 		Create Load command (for a[j])
+402C 02B 		Impliment load command
+B000 02C 		Becomes load command
+4006 02D 		Store a[j] value in temp_val
+3004 02E 		Load FIRST_INDEX
+5008 02F 		Add j to FIRST_INDEX
+6002 030 		Subtract 1 from FIRST_INDEX + j
+500A 031 		Create load command (for a[j-1])
+4033 032 		Implimnet load command
+B000 033 		Becomes load command
+6006 034 		a[j-1] - a[j] (if > 0 then flip < 0 skip)
+E049 035 		Jump if negative (in correct order)
+B000 036 Begin Swap (Note a[j] is stored in temp)
+3004 037 		Load FIRST_INDEX
+5008 038 		Add j to FIRST_INDEX
+5009 039 		Create Store command (for a[j] == a[j-1])
+4041 03A 		Impliment Store command (after a[j-1] load acum)
+3004 03B 		Load FIRST_INDEX
+5008 03C 		Add j to FIRST_INDEX
+6002 03D 		Subtract 1 from FIRST_INDEX + j (a[j-1])
+500A 03E 		Create Load command (for a[j-1])
+4040 03F 		Impliment Load command for (a[j-1])
+B000 040 		Becomes a Load command for (a[j-1])
+B000 041 		Becomes Store command (a[j] == a[j-1])
+3004 042 		Load FIRST_INDEX
+5008 043 		Add j to FIRST_INDEX
+6002 044 		Subtract 1 from FIRST_INDEX + j (a[j-1])
+5009 045 		Create Store command (for a[j-1])
+4048 046 		Impliment Store command
+3006 047 		Load temp_val to accum
+B000 048 		Becomes store command (a[j-1] = temp)
+B000 049 End Swap
+B000 04A Decriment j and loop
+3008 04B 		Load j to accum
+6002 04C		Subtract 1 from accum (j--)
+4008 04D 		Store updated j
+3007 04E 		Load i to accum
+6008 04F 		Substract j from accum (i-j) [loop if -]
+E027 050 		Loop back to start of inner loop
+B000 051 Incriment i and loop
+3007 052 	Load i to accum
+5002 053 	Add 1 to i (i++)
+4007 054 	Store updated i
+6001 055 	Subtract SIZE from i (i-size) [loop if -]
+E022 056 	Loop back to start of outer loop
+B000 057 Print Sorted array setup
+B000 058 	Setup Print Loop
+3003 059 	Load ZERO to accum
+4007 05A 	Store in i (i = 0)
+B000 05B Start print loop
+3004 05C 	Load FIRST_INDEX to accum
+5007 05D 	Add i to FIRST_INDEX (i+FIRST_INDEX)
+500A 05E 	Create Load command to load array @ temp_index
+4060 05F 	Impliment the load command above on line below
+B000 060 	Becomes load command to load a[temp_index]
+1800 061 	Print value in accum (a[temp_index])
+B000 062 Incriment i for loop
+3007 063 	Load i to accum
+5002 064 	Add 1 to i (i++)
+4007 065 	Store updated i
+6001 066 	Subtract SIZE from i (i - SIZE) [if negative loop]
+E05B 067 	Loop back to start of print loop
+0000 068 	Halt. End of program
